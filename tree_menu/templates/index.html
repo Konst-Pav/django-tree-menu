@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Tree Menu{% endblock %}
+
+{% block body %}
+<h1>Меню:</h1>
+<ul>
+  {% for item in menu %}
+  <li>{{ item.name }}</li>
+  {% endfor %}
+</ul>
+{% endblock %}
