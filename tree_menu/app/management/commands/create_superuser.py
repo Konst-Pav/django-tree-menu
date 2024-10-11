@@ -9,9 +9,9 @@ load_dotenv()
 
 UserModel = get_user_model()
 
-SUPERUSER_USERNAME = os.getenv('DJANGO_SUPERUSER_USERNAME')
-SUPERUSER_EMAIL = os.getenv('DJANGO_SUPERUSER_EMAIL')
-SUPERUSER_PASSWORD = os.getenv('DJANGO_SUPERUSER_PASSWORD')
+SUPERUSER_USERNAME = os.getenv('DJANGO_SUPERUSER_USERNAME', default='admin')
+SUPERUSER_EMAIL = os.getenv('DJANGO_SUPERUSER_EMAIL', default='admin@admin.mail')
+SUPERUSER_PASSWORD = os.getenv('DJANGO_SUPERUSER_PASSWORD', default='admin')
 
 
 class Command(BaseCommand):
