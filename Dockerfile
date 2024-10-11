@@ -16,7 +16,7 @@ COPY --from=requirements-stage /tmp/requirements.txt /tree_menu/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /tree_menu/requirements.txt
 
-COPY ./tree_menu /tree_menu
+COPY . .
 
 RUN /tree_menu/setup.sh
 
