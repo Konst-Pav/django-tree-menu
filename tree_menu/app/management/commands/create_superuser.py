@@ -18,7 +18,7 @@ class Command(BaseCommand):
 
     def handle(self, *args, **options):
         self._class.objects.create_superuser(
-            SUPERUSER_USERNAME,
-            SUPERUSER_EMAIL,
-            SUPERUSER_PASSWORD,
+            username=SUPERUSER_USERNAME,
+            email=SUPERUSER_EMAIL,
+            password=SUPERUSER_PASSWORD,
         )
