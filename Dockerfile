@@ -18,6 +18,6 @@ RUN pip install --no-cache-dir --upgrade -r /tree_menu/requirements.txt
 
 COPY ./tree_menu /tree_menu
 
-RUN /tree_menu/entrypoint.sh
+RUN /tree_menu/setup.sh
 
 CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
