@@ -14,7 +14,7 @@ WORKDIR /tree_menu
 
 COPY --from=requirements-stage /tmp/requirements.txt /tree_menu/requirements.txt
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /tree_menu/requirements.txt
 
 COPY ./tree_menu /tree_menu
 
