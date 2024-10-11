@@ -16,8 +16,12 @@ COPY --from=requirements-stage /tmp/requirements.txt /tree_menu/requirements.txt
 
 RUN pip install --no-cache-dir --upgrade -r /tree_menu/requirements.txt
 
-COPY . .
+COPY ./tree_menu ./tree_menu
 
-RUN /tree_menu/setup.sh
+COPY ./.env.example ./.env.example
 
-CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
+COPY ./setup.sh ./setup.sh
+
+RUN ./setup.sh
+
+CMD ["python", "tree_menu/manage.py", "runserver", "0.0.0.0:8000"]
