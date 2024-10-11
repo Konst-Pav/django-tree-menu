@@ -4,5 +4,3 @@ services:
     container_name: tree_menu
     ports:
       - "8000:8000"
-    env_file:
-      - .env
