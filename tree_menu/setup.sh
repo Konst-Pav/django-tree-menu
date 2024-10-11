@@ -1,14 +1,12 @@
 #!/bin/bash
 
-ENV_FILE=.env
-
-if ! [ -f "$ENV_FILE" ]; then
-  cat .env.example > $ENV_FILE
+if ! [ -f ".env" ]; then
+  cat .env.example > .env
 fi
 
 while IFS='=' read -r key value; do
 	export "$key"="$value"
-done < "$ENV_FILE"
+done < ".env"
 
 
 python manage.py makemigrations
