@@ -1,6 +1,6 @@
 # Django Tree Menu
 ### Древовидное меню на фреймворке Django
-<img src="menu_example.png" alt="Пример древовидного меню" width="30%">
+<img src="menu_example.png" alt="Пример древовидного меню" width="45%">
 
 ## Установка
 Вариант 1 - с помощью Docker:
