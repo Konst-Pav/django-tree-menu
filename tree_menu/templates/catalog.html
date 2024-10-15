@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load menu_tags %}
+
+{% block title %}
+Tree menu app
+{% endblock %}
+
+{% block body %}
+<div>
+  {% draw_menu menu_slug %}
+</div>
+<p>
+  <a href="{% url 'menu_list' %}">К списку меню</a>
+</p>
+{% endblock %}

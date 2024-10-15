@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
+{% load static %}
+{% load menu_tags %}
 
 {% block title %}Tree Menu{% endblock %}
 
 {% block body %}
-<h1>Меню:</h1>
-<ul>
+<div>
+  <ul>
   {% for item in menu %}
-  <li>{{ item.name }}</li>
+  <li><a href="/{{ item.slug }}/">{{ item.name }}</a></li>
   {% endfor %}
-</ul>
+  </ul>
+</div>
 {% endblock %}

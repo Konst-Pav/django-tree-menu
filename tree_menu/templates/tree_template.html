@@ -1,0 +1,8 @@
+<ul>
+  {% for item in submenu %}
+  <li><a href="{{ item.url }}">{{ item.name }}</a></li>
+    {% if item.children %}
+    {% include 'tree_template.html' with submenu=item.children %}
+    {% endif %}
+  {% endfor %}
+</ul>
